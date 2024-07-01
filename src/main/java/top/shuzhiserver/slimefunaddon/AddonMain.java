@@ -13,6 +13,10 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import top.shuzhiserver.slimefunaddon.items.*;
+import top.shuzhiserver.slimefunaddon.items.CowBone;
+import top.shuzhiserver.slimefunaddon.items.DiamondGummie;
+import top.shuzhiserver.slimefunaddon.items.FishBone;
+import top.shuzhiserver.slimefunaddon.items.GelatinSheets;
 
 public class AddonMain extends JavaPlugin implements SlimefunAddon {
 
@@ -50,7 +54,7 @@ public class AddonMain extends JavaPlugin implements SlimefunAddon {
         };
         GelatinSheets gelatinSheets = new GelatinSheets(itemGroup,gelatinSheetsItem,RecipeType.ENHANCED_CRAFTING_TABLE,recipe);
         gelatinSheets.register(this);
-        SlimefunItemStack diamondGummieItem = new SlimefunItemStack("DIAMOND_GUMMIE","eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2I1ZmFmNGNkODcxMzhjODcxY2M2YTg2NzU4MTdhODk5ODVhM2NiODk3MjFhNGM3NjJmZTY2NmZmNjE4MWMyNCJ9fX0=","&5钻石软糖","入口即化,附带抗性提升5");
+        SlimefunItemStack diamondGummieItem = new SlimefunItemStack("DIAMOND_GUMMIE","eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGEyNGRjOWYxNzMzZjAwZTY3NjUwOWEyMjFiOGE2NmE2ZTA1OWU1NTA0NWQwOGE3ZTRmYzA4ZDdkMzEwODc1OCJ9fX0=","&5钻石软糖","入口即化,附带抗性提升5");
         recipe = new ItemStack[]{
                 gelatinSheetsItem, new ItemStack(Material.SUGAR)  , gelatinSheetsItem,
                 gelatinSheetsItem, new ItemStack(Material.DIAMOND), gelatinSheetsItem,
