@@ -44,6 +44,7 @@ public class AddonMain extends JavaPlugin implements SlimefunAddon {
                 fishBoneItem, cowBoneItem
         };
         SlimefunItem gelatinSheets = new SlimefunItem(itemGroup,gelatinSheetsItem,RecipeType.FOOD_FABRICATOR,recipe);
+        gelatinSheets.register(this);
     }
 
     @Override
