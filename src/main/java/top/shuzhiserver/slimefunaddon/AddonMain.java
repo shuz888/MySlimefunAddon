@@ -23,6 +23,7 @@ public class AddonMain extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
+        getLogger().info(parseColor("&4SlimefunAddon 启动成功！"));
         // Read something from your config.yml
         Config cfg = new Config(this);
 
@@ -110,7 +111,7 @@ public class AddonMain extends JavaPlugin implements SlimefunAddon {
         research.register();
 
         researchKey = new NamespacedKey(this, "gummiesII");
-        research = new Research(researchKey, 584769432, "成功解锁研究[高级软糖]", 15);
+        research = new Research(researchKey, 584768385, "成功解锁研究[高级软糖]", 15);
         SlimefunItemStack uraniumGummieItem = new SlimefunItemStack("URANIUM_GUMMIE",SlimefunItems.URANIUM,"&4轴软糖","有着强大的力量!");
         recipe = new ItemStack[]{
                 gelatinSheetsIIItem, SlimefunItems.URANIUM        , gelatinSheetsIIItem,
@@ -119,6 +120,8 @@ public class AddonMain extends JavaPlugin implements SlimefunAddon {
         };
         UraniumGummie uraniumGummie = new UraniumGummie(itemGroup,uraniumGummieItem,RecipeType.MAGIC_WORKBENCH,recipe);
         uraniumGummie.register(this);
+        research.addItems(uraniumGummie);
+        research.register();
     }
 
     @Override
@@ -134,6 +137,10 @@ public class AddonMain extends JavaPlugin implements SlimefunAddon {
          * If you are using your main class for this, simply return "this".
          */
         return this;
+    }
+
+    public static String parseColor(String s){
+        return s.replace("&","§").replace("§§","&");
     }
 
 }

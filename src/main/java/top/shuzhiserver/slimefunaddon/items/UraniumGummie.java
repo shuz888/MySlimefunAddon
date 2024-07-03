@@ -29,7 +29,7 @@ public class UraniumGummie extends SlimefunItem implements Radioactive {
         // 给予玩家所有正向效果
         for (PotionEffectType effectType : PotionEffectType.values()) {
             if (effectType != null && isPositiveEffect(effectType)) {
-                player.addPotionEffect(new PotionEffect(effectType, Integer.MAX_VALUE, 1));
+                player.addPotionEffect(new PotionEffect(effectType, Integer.MAX_VALUE, 5));
             }
         }
         event.getPlayer().setFoodLevel(100);
@@ -54,12 +54,10 @@ public class UraniumGummie extends SlimefunItem implements Radioactive {
             case "ABSORPTION":
             case "SATURATION":
             case "GLOWING":
-            case "LEVITATION":
             case "LUCK":
             case "CONDUIT_POWER":
             case "DOLPHINS_GRACE":
             case "HERO_OF_THE_VILLAGE":
-            case "SLOW_FALLING":
                 return true;
             default:
                 return false;
